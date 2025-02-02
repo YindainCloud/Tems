@@ -1,0 +1,66 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 3em;
+    color: #c30f0f;
+}
+p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5em;
+    margin-top: 6px;
+}
+
+body {
+    
+    background-color: #ffccda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;   
+}
+
+.sticker {
+    width: 300px;
+    animation: float 2s infinite ease-in-out;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+img.character {
+    animation: float 2s infinite ease-in-out;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.yes-button, .no-button {
+   background-color: #fff;
+    color: #ff4d6d;
+    border: 2px solid #ff4d6d;
+    font-family: Dosis;
+    padding: 10px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    border-color:#ff4d6d;
+    font-family: Dosis, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.yes-button:hover,.no-button:hover {
+    transform: scale(1.1);
+} 

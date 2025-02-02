@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Proposal</title>
+    <link rel="stylesheet" href="tems.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hi bubba,</h1>
+        <p>Will you be my valentine?</p>
+        <img src="stickers/sticker 3.png" alt="Cute Character" class="sticker" style="margin-top: 0%;">
+        <div class="buttons">
+            <a href="yes.html" class="yes-button">Yes</a>
+            <a href="no.html" class="no-button">No</a>
+        </div>
+    </div>
+
+    <!-- Confetti.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+
+    <script>
+        document.querySelector(".yes-button").addEventListener("click", (event) => {
+            event.preventDefault(); // Prevents the page from changing immediately
+            
+            // Confetti animation
+            confetti({
+                particleCount: 150,
+                spread: 60,
+                origin: { y: 0.7 },
+                colors: ['#ff0000', '#ff1493', '#ff69b4']
+            });
+
+            // After 2 seconds, redirect to yes.html
+            setTimeout(() => {
+                window.location.href = "yes.html";
+            }, 1500);
+        });
+
+        const noBtn = document.querySelector(".no-button");
+
+        noBtn.addEventListener("mouseover", () => {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            noBtn.style.position = "absolute";
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        }); 
+    </script>
+</body>
+</html>

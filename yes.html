@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yay!</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="tems.css">
+    
+    <!-- Confetti Script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.0"></script>
+    
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffe6f2;
+            color: #ff4081;
+            font-family: "Poppins", sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 3rem;
+            animation: pop 1s ease-in-out infinite alternate;
+        }
+        .sticker {
+            width: 200px;
+            height: auto;
+            animation: bounce 1.5s infinite;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+        .heart {
+            font-size: 2rem;
+            animation: heartbeat 1.5s infinite;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #ff4081;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-family: Poppins;
+        }
+        .back-btn:hover {
+            background-color: #ff0055;
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pop {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Oporrrrrr!! <span class="heart">🎉💃💖</span></h1>
+        <img src="stickers/sticker4.png" alt="Cute Character" class="sticker"><br><br>
+        <p>( you for no gree ) </p>
+    </div>
+
+    <script>
+        // Confetti Effect
+        function shootConfetti() {
+            confetti({
+                particleCount: 200,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+
+        // Trigger confetti multiple times
+        setTimeout(shootConfetti, 500);
+        setTimeout(shootConfetti, 1500);
+        setTimeout(shootConfetti, 2500);
+    </script>
+</body>
+</html>
