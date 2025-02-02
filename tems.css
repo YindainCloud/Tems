@@ -17,7 +17,9 @@ p {
 
 body {
     
-    background-color: #ffccda;
+    background-image: url(./stickers/ttg.jpg);
+    background-size: tile; 
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
